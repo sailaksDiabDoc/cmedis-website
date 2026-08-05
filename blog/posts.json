@@ -7,7 +7,10 @@
     "date": "2026-07-26",
     "source": "manual",
     "page": "real-patient-real-results.html",
-    "cover": { "type": "icon", "icon": "trend" }
+    "cover": {
+      "type": "icon",
+      "icon": "trend"
+    }
   },
   {
     "slug": "gdm-continuous-glucose-monitoring",
@@ -17,6 +20,23 @@
     "date": "2026-07-26",
     "source": "manual",
     "page": "gdm-continuous-glucose-monitoring.html",
-    "cover": { "type": "icon", "icon": "sensor" }
+    "cover": {
+      "type": "icon",
+      "icon": "sensor"
+    }
+  },
+  {
+    "slug": "rheumatoid-arthritis",
+    "title": "Rheumatoid Arthritis",
+    "tag": "From the Blog",
+    "excerpt": "A few weeks ago, a young woman in her late twenties walked into my clinic with pain and stiffness in multiple joints — hands, wrists, knees — worse in the mornings, lasting over an hour before she could move freely.…",
+    "date": "2026-08-05",
+    "source": "godaddy",
+    "page": "rheumatoid-arthritis.html",
+    "godaddyUrl": "https://cmedis.godaddysites.com/f/rheumatoid-arthritis",
+    "cover": {
+      "type": "image",
+      "src": "https://img1.wsimg.com/isteam/ip/66b4d00a-db44-4e66-9231-28c65bf7ae11/280397.png"
+    }
   }
 ]
