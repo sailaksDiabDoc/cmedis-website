@@ -108,12 +108,12 @@ const FAQ = [
   {
     id: 'appointment',
     keywords: ['appointment', 'book', 'booking', 'schedule', 'consult', 'consultation', 'visit', 'call'],
-    response: `To book an appointment, just give us a call:<br>• Kovilambakkam: <a href="tel:${KOVILAMBAKKAM_TEL}">98403 45363</a><br>• Alandur: <a href="tel:${ALANDUR_TEL}">93422 97922</a>`
+    response: `To book an appointment, just give us a call:<br>• Kovilambakkam: <a href="tel:${KOVILAMBAKKAM_TEL}">+91 98403 45363</a><br>• Alandur: <a href="tel:${ALANDUR_TEL}">+91 93422 97922</a>`
   },
   {
     id: 'contact',
     keywords: ['phone', 'number', 'contact', 'reach'],
-    response: `You can reach us at:<br>• Kovilambakkam: <a href="tel:${KOVILAMBAKKAM_TEL}">98403 45363</a><br>• Alandur: <a href="tel:${ALANDUR_TEL}">93422 97922</a>`
+    response: `You can reach us at:<br>• Kovilambakkam: <a href="tel:${KOVILAMBAKKAM_TEL}">+91 98403 45363</a><br>• Alandur: <a href="tel:${ALANDUR_TEL}">+91 93422 97922</a>`
   }
 ];
 

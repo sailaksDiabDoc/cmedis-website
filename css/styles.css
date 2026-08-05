@@ -33,6 +33,10 @@
     --text-600: #a9bdc7;
     --text-400: #7c93a0;
     --border: #1c3646;
+    /* Lightened so navy-800/700 stays visible as foreground text/icons on dark surfaces
+       (used only for backgrounds are hardcoded separately and unaffected). */
+    --navy-800: #9fc3de;
+    --navy-700: #7fa8c9;
   }
 }
 
@@ -175,7 +179,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 
 /* ============ Hero ============ */
 .hero {
-  background: linear-gradient(135deg, var(--navy-900), var(--navy-700));
+  background: linear-gradient(135deg, #0d2436, #1e4e6b);
   color: #fff;
   padding: 5rem 0 5.5rem;
 }
@@ -322,7 +326,10 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .location-card h3 { font-size: 1.2rem; }
 .location-card h3 span { color: var(--text-600); font-weight: 400; font-size: 0.9rem; }
 .location-address { font-size: 0.92rem; }
-.location-phone a { font-family: var(--font-head); font-weight: 600; font-size: 1.15rem; color: var(--navy-800); }
+.location-phone a { font-family: var(--font-head); font-weight: 600; font-size: 1.15rem; color: var(--teal-600); }
+@media (prefers-color-scheme: dark) {
+  .location-phone a { color: #7fd7cf; }
+}
 .location-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem; }
 .location-actions.center-actions { justify-content: center; }
 
@@ -524,7 +531,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 
 /* Blog / article page chrome */
 .page-hero {
-  background: linear-gradient(135deg, var(--navy-900), var(--navy-700));
+  background: linear-gradient(135deg, #0d2436, #1e4e6b);
   color: #fff;
   padding: 3.5rem 0;
   text-align: center;
@@ -636,7 +643,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .chatbot.is-open .chatbot-panel { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
 
 .chatbot-header {
-  background: linear-gradient(135deg, var(--navy-900), var(--navy-700));
+  background: linear-gradient(135deg, #0d2436, #1e4e6b);
   color: #fff;
   padding: 1rem 1.25rem;
   display: flex;
