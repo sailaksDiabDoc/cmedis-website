@@ -384,7 +384,8 @@ p { margin: 0 0 1em; color: var(--text-600); }
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-.article-cover img { width: 100%; height: 100%; object-fit: cover; }
+.article-cover img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.post-article .article-cover { height: 320px; }
 .article-body { padding: 1.75rem 2rem 2rem; }
 .article-tag {
   display: inline-block;
