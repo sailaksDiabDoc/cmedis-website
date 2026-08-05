@@ -204,6 +204,16 @@ function buildPostPage({ title, dateDisplay, contentHtml, featuredImage, godaddy
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${escapeHtml(title)} | C-MEDiS Blog</title>
 <meta name="description" content="${escapeHtml(title)} — from Dr. Sai Lakshmikanth Bharathi, C-MEDiS Chennai.">
+<link rel="icon" type="image/png" href="../assets/images/favicon-256.png">
+<link rel="apple-touch-icon" href="../assets/images/favicon-256.png">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://cmedis.co.in/blog/${escapeHtml(slug)}.html">
+<meta property="og:title" content="${escapeHtml(title)}">
+<meta property="og:description" content="${escapeHtml(title)} — from Dr. Sai Lakshmikanth Bharathi, C-MEDiS Chennai.">
+<meta property="og:image" content="https://cmedis.co.in/assets/images/og-banner.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${escapeHtml(title)}">
+<meta name="twitter:image" content="https://cmedis.co.in/assets/images/og-banner.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
