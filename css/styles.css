@@ -356,12 +356,12 @@ p { margin: 0 0 1em; color: var(--text-600); }
 
 /* Insights / Articles */
 .articles-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 760px;
-  margin: 0 auto 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
+.articles-grid.articles-grid-wide { max-width: 900px; margin-left: auto; margin-right: auto; }
 .article-card {
   background: var(--bg);
   border: 1px solid var(--border);
@@ -468,20 +468,51 @@ p { margin: 0 0 1em; color: var(--text-600); }
   gap: 1rem;
   margin-top: 1.25rem;
 }
-.article-toggle {
+.article-link { font-size: 0.85rem; font-weight: 600; color: var(--teal-600); }
+.article-readmore {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 0.88rem;
-  color: var(--navy-800);
-  background: var(--bg-muted);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 0.55em 1.2em;
-  cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease;
+  color: var(--teal-600);
 }
-.article-toggle:hover { background: var(--teal-500); color: #fff; border-color: var(--teal-500); }
-.article-link { font-size: 0.85rem; font-weight: 600; color: var(--teal-600); }
+.article-readmore:hover { color: var(--teal-500); }
+
+/* Blog / article page chrome */
+.page-hero {
+  background: linear-gradient(135deg, var(--navy-900), var(--navy-700));
+  color: #fff;
+  padding: 3.5rem 0;
+  text-align: center;
+}
+.page-hero .eyebrow { color: #7fd7cf; }
+.page-hero h1 { color: #fff; font-size: clamp(1.8rem, 3.5vw, 2.5rem); margin-bottom: 0.4em; }
+.page-hero p { color: rgba(255,255,255,0.8); max-width: 560px; margin: 0 auto; }
+
+.breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--teal-600);
+  margin-bottom: 1.5rem;
+}
+.breadcrumb:hover { color: var(--teal-500); }
+
+.post-article {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.post-article .article-tag { margin-bottom: 1em; }
+.post-article h1 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin-bottom: 0.6em; }
+.post-meta {
+  font-size: 0.85rem;
+  color: var(--text-400);
+  margin-bottom: 2rem;
+}
 
 .articles-empty {
   max-width: 520px;

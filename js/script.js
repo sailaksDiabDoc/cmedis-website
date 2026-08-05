@@ -1,5 +1,6 @@
 // ============ Footer year ============
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // ============ Mobile nav toggle ============
 const navToggle = document.getElementById('navToggle');
@@ -39,42 +40,35 @@ if (articlesGrid && articlesEmpty) {
   articlesEmpty.style.display = articlesGrid.children.length ? 'none' : '';
 }
 
-document.querySelectorAll('.article-toggle').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const full = btn.closest('.article-body').querySelector('.article-full');
-    const isHidden = full.hasAttribute('hidden');
-    full.toggleAttribute('hidden');
-    btn.textContent = isHidden ? 'Show less' : 'Read full article';
-  });
-});
-
 // ============ Testimonial carousel ============
 const carouselTrack = document.getElementById('carouselTrack');
-const carouselDots = document.getElementById('carouselDots');
-const carouselPrev = document.getElementById('carouselPrev');
-const carouselNext = document.getElementById('carouselNext');
-const slides = Array.from(carouselTrack.children);
-let currentSlide = 0;
+if (carouselTrack) {
+  const carouselDots = document.getElementById('carouselDots');
+  const carouselPrev = document.getElementById('carouselPrev');
+  const carouselNext = document.getElementById('carouselNext');
+  const slides = Array.from(carouselTrack.children);
+  let currentSlide = 0;
 
-slides.forEach((_, i) => {
-  const dot = document.createElement('button');
-  dot.className = 'carousel-dot';
-  dot.type = 'button';
-  dot.setAttribute('aria-label', `Go to testimonial ${i + 1}`);
-  dot.addEventListener('click', () => goToSlide(i));
-  carouselDots.appendChild(dot);
-});
-const dots = Array.from(carouselDots.children);
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot';
+    dot.type = 'button';
+    dot.setAttribute('aria-label', `Go to testimonial ${i + 1}`);
+    dot.addEventListener('click', () => goToSlide(i));
+    carouselDots.appendChild(dot);
+  });
+  const dots = Array.from(carouselDots.children);
 
-function goToSlide(index) {
-  currentSlide = (index + slides.length) % slides.length;
-  carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-  dots.forEach((dot, i) => dot.classList.toggle('is-active', i === currentSlide));
+  function goToSlide(index) {
+    currentSlide = (index + slides.length) % slides.length;
+    carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+    dots.forEach((dot, i) => dot.classList.toggle('is-active', i === currentSlide));
+  }
+
+  carouselPrev.addEventListener('click', () => goToSlide(currentSlide - 1));
+  carouselNext.addEventListener('click', () => goToSlide(currentSlide + 1));
+  goToSlide(0);
 }
-
-carouselPrev.addEventListener('click', () => goToSlide(currentSlide - 1));
-carouselNext.addEventListener('click', () => goToSlide(currentSlide + 1));
-goToSlide(0);
 
 // ============ Chatbot ============
 const KOVILAMBAKKAM_TEL = '+919840345363';
