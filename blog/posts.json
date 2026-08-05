@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "real-patient-real-results",
+    "title": "Real Patient, Real Results: When \"Standard Treatment\" Isn't Enough",
+    "tag": "Diabetes & Weight Management",
+    "excerpt": "A 58-year-old woman came to us with type 2 diabetes, severe insulin resistance, and sugars that wouldn't budge on a four-drug regimen. Here's what changed when we treated insulin resistance, weight, and blood pressure as one connected problem.",
+    "date": "2026-07-26",
+    "source": "manual",
+    "page": "real-patient-real-results.html",
+    "cover": { "type": "icon", "icon": "trend" }
+  },
+  {
+    "slug": "gdm-continuous-glucose-monitoring",
+    "title": "Why I Now Push Every Suitable GDM Patient Toward CGM",
+    "tag": "Gestational Diabetes & CGM",
+    "excerpt": "A pattern from my own practice managing Gestational Diabetes Mellitus (GDM) has made me a firm believer in continuous glucose monitoring during pregnancy — here's the clinical reasoning, the evidence, and where it's still an evolving field.",
+    "date": "2026-07-26",
+    "source": "manual",
+    "page": "gdm-continuous-glucose-monitoring.html",
+    "cover": { "type": "icon", "icon": "sensor" }
+  }
+]
