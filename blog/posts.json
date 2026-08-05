@@ -8,8 +8,8 @@
     "source": "manual",
     "page": "real-patient-real-results.html",
     "cover": {
-      "type": "icon",
-      "icon": "trend"
+      "type": "image",
+      "src": "/assets/images/cover-diabetes-consultation.jpg"
     }
   },
   {
@@ -21,8 +21,8 @@
     "source": "manual",
     "page": "gdm-continuous-glucose-monitoring.html",
     "cover": {
-      "type": "icon",
-      "icon": "sensor"
+      "type": "image",
+      "src": "/assets/images/service-cgm.jpg"
     }
   },
   {
