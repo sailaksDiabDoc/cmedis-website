@@ -163,7 +163,7 @@ function blocksToHtml(blocks) {
       const boldRatio = styleCoverage(block, 'BOLD');
       const isHeading = boldRatio > 0.85 && block.text.length < 100 && !block.text.includes('\n');
       if (isHeading) {
-        html += `<h4>${escapeHtml(block.text)}</h4>\n`;
+        html += `<h2>${escapeHtml(block.text)}</h2>\n`;
       } else {
         html += `<p>${renderInline(block)}</p>\n`;
       }
@@ -211,6 +211,8 @@ function buildPostPage({ title, dateDisplay, contentHtml, featuredImage, godaddy
 </head>
 <body>
 
+<a href="#main" class="skip-link">Skip to main content</a>
+
 <!-- ============ HEADER ============ -->
 <header class="site-header" id="top">
   <div class="container header-inner">
@@ -241,7 +243,7 @@ function buildPostPage({ title, dateDisplay, contentHtml, featuredImage, godaddy
 </header>
 
 <!-- ============ POST ============ -->
-<section class="section">
+<section class="section" id="main">
   <div class="container post-article">
     <a href="index.html" class="breadcrumb">&larr; Back to Blog</a>
 
@@ -270,17 +272,17 @@ ${contentHtml}    </div>
       <p><strong>C-MEDiS</strong><br>Metabolic, Endocrine, Diabetes, Infectious &amp; Sleep Clinic — Chennai</p>
     </div>
     <div class="footer-col">
-      <h4>Kovilambakkam</h4>
+      <h3>Kovilambakkam</h3>
       <p>1/512, S. Kolathur, Sathya Nagar,<br>Viduthalai Nagar, Kovilambakkam,<br>Chennai, Tamil Nadu 600129</p>
       <a href="tel:+919840345363">98403 45363</a>
     </div>
     <div class="footer-col">
-      <h4>Alandur</h4>
+      <h3>Alandur</h3>
       <p>SB Speciality Clinic,<br>Old No. 48, New No. 91,<br>Ekambaram Daffedar St, Alandur,<br>Chennai, Tamil Nadu 600016</p>
       <a href="tel:+919342297922">93422 97922</a>
     </div>
     <div class="footer-col">
-      <h4>Quick Links</h4>
+      <h3>Quick Links</h3>
       <a href="../index.html#about">About</a>
       <a href="../index.html#services">Services</a>
       <a href="../index.html#locations">Locations</a>
